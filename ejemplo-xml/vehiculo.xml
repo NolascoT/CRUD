@@ -1,0 +1,50 @@
+<umldiagrams>
+	<UMLClassDiagram name="Class diagram" backgroundNodes="#ffffbb">
+		<UMLClass id="0.7350830823404926:UMLClass_2" x="215" y="128" width="129" height="84" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Vehicle "/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="owner"/>
+				<item value="capacity "/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true">
+				<item value="getOwner ()"/>
+				<item value="getCapacity()"/>
+			</superitem>
+		</UMLClass>
+		<UMLClass id="0.7350830823404926:UMLClass_1" x="90" y="270" width="129" height="58" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Car"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="num_doors"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true">
+				<item value="getNumDoors()"/>
+			</superitem>
+		</UMLClass>
+		<UMLClass id="0.7350830823404926:UMLClass_0" x="300" y="273" width="129" height="58" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Boat"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="mast"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true">
+				<item value="getMast()"/>
+			</superitem>
+		</UMLClass>
+		<UMLGeneralization id="0.7350830823404926:UMLGeneralization_0" side_A="0.7350830823404926:UMLClass_1" side_B="0.7350830823404926:UMLClass_2">
+			<point x="172.02985074626866" y="270"/>
+			<point x="195" y="232"/>
+			<point x="195" y="170"/>
+			<point x="215" y="170"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value=""/>
+		</UMLGeneralization>
+		<UMLGeneralization id="0.7350830823404926:UMLGeneralization_1" side_A="0.7350830823404926:UMLClass_0" side_B="0.7350830823404926:UMLClass_2">
+			<point x="345.82575757575756" y="273"/>
+			<point x="306.54545454545456" y="212"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value=""/>
+		</UMLGeneralization>
+	</UMLClassDiagram>
+</umldiagrams>
