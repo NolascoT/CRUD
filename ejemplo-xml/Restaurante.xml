@@ -1,0 +1,99 @@
+<umldiagrams>
+	<UMLClassDiagram name="Class diagram" backgroundNodes="#ffffbb">
+		<UMLClass id="0.47101462930261473:UMLClass_5" x="470" y="47" width="161" height="101" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Platillo"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="+nombre :string "/>
+				<item value="+precio:float "/>
+				<item value="+descripcion:string"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLClass id="0.47101462930261473:UMLClass_4" x="185" y="249" width="155" height="88" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Empleado"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="nombre:string"/>
+				<item value="apellidosp:string "/>
+				<item value="apellidom:string"/>
+				<item value="matricula:int"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLClass id="0.47101462930261473:UMLClass_3" x="15" y="417" width="161" height="75" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Chef"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="sueldo:float"/>
+				<item value="cargo :string"/>
+				<item value="especialidad:string"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLClass id="0.47101462930261473:UMLClass_2" x="185" y="66" width="153" height="62" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Restaurante"/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="+nombre:string"/>
+				<item value="+domicilio :string"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLClass id="0.47101462930261473:UMLClass_1" x="210" y="418" width="113" height="62" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Mesero "/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="mesa:int"/>
+				<item value="sueldo:float"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLClass id="0.47101462930261473:UMLClass_0" x="370" y="422" width="129" height="49" backgroundColor="#ffffbb" lineColor="#294253" lineWidth="1" tagValues="" abstract="false">
+			<superitem id="stereotypes" visibleSubComponents="true"/>
+			<item id="name" value="Encargado "/>
+			<superitem id="attributes" visibleSubComponents="true">
+				<item value="sucursal:string"/>
+			</superitem>
+			<superitem id="operations" visibleSubComponents="true"/>
+		</UMLClass>
+		<UMLAssociation id="0.47101462930261473:UMLAssociation_0" side_A="0.47101462930261473:UMLClass_2" side_B="0.47101462930261473:UMLClass_5">
+			<point x="338" y="97.13235294117646"/>
+			<point x="470" y="97.36072664359861"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value="tiene"/>
+			<item id="roleA" value=""/>
+			<item id="roleB" value=""/>
+			<item id="multiplicityA" value="1"/>
+			<item id="multiplicityB" value="*"/>
+		</UMLAssociation>
+		<UMLGeneralization id="0.47101462930261473:UMLGeneralization_1" side_A="0.47101462930261473:UMLClass_3" side_B="0.47101462930261473:UMLClass_4">
+			<point x="134.27708978328172" y="417"/>
+			<point x="217.0015479876161" y="337"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value=""/>
+		</UMLGeneralization>
+		<UMLGeneralization id="0.47101462930261473:UMLGeneralization_2" side_A="0.47101462930261473:UMLClass_1" side_B="0.47101462930261473:UMLClass_4">
+			<point x="265.70512820512823" y="418"/>
+			<point x="263.62820512820514" y="337"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value=""/>
+		</UMLGeneralization>
+		<UMLGeneralization id="0.47101462930261473:UMLGeneralization_3" side_A="0.47101462930261473:UMLClass_0" side_B="0.47101462930261473:UMLClass_4">
+			<point x="407.0472312703583" y="422"/>
+			<point x="311.8029315960912" y="337"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value=""/>
+		</UMLGeneralization>
+		<UMLAssociation id="0.47101462930261473:UMLAssociation_4" side_A="0.47101462930261473:UMLClass_4" side_B="0.47101462930261473:UMLClass_2">
+			<point x="262.2755102040816" y="249"/>
+			<point x="261.65816326530614" y="128"/>
+			<superitem id="stereotype" visibleSubComponents="true"/>
+			<item id="name" value="tiene "/>
+			<item id="roleA" value=""/>
+			<item id="roleB" value=""/>
+			<item id="multiplicityA" value="*"/>
+			<item id="multiplicityB" value="1"/>
+		</UMLAssociation>
+	</UMLClassDiagram>
+</umldiagrams>
