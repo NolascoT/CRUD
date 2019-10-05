@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umldiagrams>
+  <item id="name" value="Platillo" />
+  <item value="nombre  string " />
+  <item value="precio float " />
+  <item value="descripcion string" />
+  <item id="name" value="Empleado" />
+  <item value="nombre string" />
+  <item value="apellidosp string " />
+  <item value="apellidom string" />
+  <item value="matricula int" />
+  <item id="name" value="Chef" />
+  <item value="sueldo float" />
+  <item value="cargo  string" />
+  <item value="especialidad string" />
+  <item id="name" value="Restaurante" />
+  <item value="nombre string" />
+  <item value="domicilio  string" />
+  <item id="name" value="Mesero " />
+  <item value="mesa int" />
+  <item value="sueldo float" />
+  <item id="name" value="Encargado " />
+  <item value="sucursal string" />
+  <item id="name" value="tiene" />
+  <item id="name" value="tiene " />
+</umldiagrams>
