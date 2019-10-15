@@ -1,10 +1,10 @@
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\bin\Debug\LectorXml.exe.config
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\bin\Debug\LectorXml.exe
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\bin\Debug\LectorXml.pdb
-C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.csprojAssemblyReference.cache
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.Form1.resources
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.Properties.Resources.resources
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.csproj.GenerateResource.cache
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.exe
 C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.pdb
+C:\Users\LENOVO Y520\source\repos\LectorXml\LectorXml\obj\Debug\LectorXml.csprojAssemblyReference.cache
