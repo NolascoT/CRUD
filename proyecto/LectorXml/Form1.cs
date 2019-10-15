@@ -69,7 +69,7 @@ namespace LectorXml
                     || line.Contains(superitem) || line.Contains(UMLAssociation)
                     || line.Contains(point) || line.Contains(UMLGeneralization)
                     || line.Contains(valueAst) || line.Contains(valueUno)
-                    || line.Contains(valueNulo) || line.Contains(UMLClass))
+                    || line.Contains(valueNulo))
                 {
                 }
                 else
@@ -97,64 +97,13 @@ namespace LectorXml
             seCargoXml.Close();
             Console.WriteLine(NewXml);
             string NewXml1 = @"<?xml version=""1.0"" ?>" + NewXml;
-            /*DataSet ds = new DataSet();
-            string NewXml1 = @"<?xml version=""1.0"" encoding=""UTF - 8""?>" + NewXml;
-            XmlTextReader reader = new XmlTextReader(new StringReader(NewXml1));
-            ds.ReadXml(reader);*/
+
 
             XmlDocument xDoc = new XmlDocument();
-            //xDoc.Load(NewXml);
-            XmlTextReader reader = new XmlTextReader(new StringReader(NewXml));
-            /*XmlNodeList UmlClass = xDoc.GetElementsByTagName("umldiagrams");
-            XmlNodeList Class =  ((XmlElement)UmlClass[0]).GetElementsByTagName("item");
 
-            foreach(XmlElement nodo in Class)
-            {
-                string clase = nodo.GetAttribute("id");
-                string atributo = nodo.GetAttribute("value");
-                Console.WriteLine(clase);
-                Console.WriteLine(atributo);
-            }*/
-            /*using (StringWriter writer = new StringWriter())
-            {
-                string indentado = null; //para alamcenar los tabs
-                while (reader.Read())
-                {
-                    //asignándole la indentación respectiva
-                    indentado = new string('\t', reader.Depth);
-
-                    //verificamos si es un tipo de nodo Elemento
-                    if (reader.NodeType == XmlNodeType.Element)
-                    {
-
-                        //si es que tiene atributos
-                        if (reader.HasAttributes)
-                            writer.WriteLine("{0}<{1}/>", indentado, reader.LocalName);
-                        else
-
-                            //indentamos y asignamos el nombre el elemento(esto no incluye el prefijo)
-                            writer.WriteLine("{0}<{1}>", indentado, reader.LocalName);
-                    }
-
-                    //verificamos si es un tipo de nodo de fin del elemento 
-                    else if (reader.NodeType == XmlNodeType.EndElement)
-                    {
-                        //indentamos y asignamos el nombre el elemento(esto si incluye el prefijo, 
-                        //pero como no existe algun prefijo definido, entonces da igual que localName)
-                        writer.WriteLine("{0}</{1}>", indentado, reader.Name);
-                    }
-                }
-
-                //cerramos el reader
-                reader.Close();
-                //creamos una variable que almacenara los resultados
-                string StringBuffer = writer.ToString();
-                //imprimimos resultados
-                Console.Write(StringBuffer);
-                richTextBox2.Text = StringBuffer;
-            }*/
-            using (System.IO.StringWriter writer = new System.IO.StringWriter())
-            {
+            XmlTextReader reader = new XmlTextReader(new StringReader(NewXml));          
+            StringWriter writer = new StringWriter();
+            
                 while (reader.Read())
                 {
                     //cadena que almacenará la indentación
@@ -179,34 +128,32 @@ namespace LectorXml
                                 {
                                     //entonces creamos una cadena "atributos" que guardará
                                     //los atributos de este nodo.
+                                    if (reader.LocalName == "UMLClass")
+                                    {                                        
+                                        writer.WriteLine("{0}<UMLClass>", indentado);
+                                    }
                                     string atributos = null;
-                                    string clase = null;
+                                    string Id = null;
                                     for (int i = 0; i < reader.AttributeCount; i++)
                                     {
                                         //nos movemos para realizar la lectura del atrbiuto de acuerdo al índice.
                                         reader.MoveToAttribute(i);
                                         //una vez que estamos ubicados en la posición correcta,
-                                        //leemos el nombre del atributo, como también el valor.
-                                        //atributos += " " + reader.Name + "='" + reader.Value + "'";
-                                        if(i==1)
+                                        //leemos el nombre del atributo, como también el valor.                                        
+                                        if (i==1&& reader.Name=="value")
                                         {
-                                                clase += reader.Value;
-                                                writer.WriteLine("{0}<clase>{1}</clase>", indentado, clase);  
+                                                Id += reader.Value;
+                                                writer.WriteLine("{0}<Id>{1}</Id>", indentado, Id);  
                                         }
-                                        if (i==0&&reader.Name!="id")
-                                        {
-                                            
+                                        if (i==0&&reader.Name!="id"&&reader.LocalName!="UMLClass")
+                                        { 
                                             atributos += reader.Value;
                                             writer.WriteLine("{0}<atributo>{1}</atributo>", indentado, atributos);
                                         }
                                     }
                                     //despues de haber leido los atributos del elemento...
                                     //moveremos el puntero al elemento.
-                                    reader.MoveToElement();
-                                    //visuali
-                                    //writer.WriteLine("{0}<{1}/>", indentado,atributos);
-                                    
-                                    
+                                    reader.MoveToElement();                            
                                 } 
                                 else
                                 {
@@ -241,7 +188,7 @@ namespace LectorXml
                 //mostrar los resultados.
                 Console.Write(writer.ToString());
                 richTextBox2.Text = writer.ToString();
-            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
