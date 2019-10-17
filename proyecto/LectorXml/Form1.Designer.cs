@@ -41,6 +41,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -102,6 +103,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(514, 285);
             this.richTextBox2.TabIndex = 5;
             this.richTextBox2.Text = "";
+            this.richTextBox2.Visible = false;
             // 
             // panel1
             // 
@@ -126,6 +128,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.richTextBox3);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox2);
             this.splitContainer1.Size = new System.Drawing.Size(776, 285);
             this.splitContainer1.SplitterDistance = 258;
@@ -177,6 +180,14 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(514, 285);
+            this.richTextBox3.TabIndex = 12;
+            this.richTextBox3.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -219,6 +230,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.RichTextBox richTextBox3;
     }
 }
 

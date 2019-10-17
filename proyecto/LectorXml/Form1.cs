@@ -12,6 +12,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace LectorXml
 {
@@ -255,6 +256,12 @@ namespace LectorXml
                 Console.WriteLine(sw.ToString());
                 richTextBox2.Text = "";
                 richTextBox2.Text = sw.ToString();
+
+                string json=JsonConvert.SerializeXmlNode(xmlDoc);
+                richTextBox3.Text = json;
+
+                Console.WriteLine(json);
+
             }
         }
 
@@ -266,13 +273,13 @@ namespace LectorXml
             saveFileDialog1.CheckFileExists = false;
             saveFileDialog1.CheckPathExists = true;
             saveFileDialog1.DefaultExt = "xml";
-            saveFileDialog1.Filter = "Text files (*.xml)|*.xml|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "Text files (*.json)|*.json";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string name = saveFileDialog1.FileName;
-                File.WriteAllText(name, richTextBox2.Text);
+                File.WriteAllText(name, richTextBox3.Text);
             }
         }
     }
